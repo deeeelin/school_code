@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "yo"
+
 function push() { 
     
     cd $(dirname $0)
@@ -22,15 +22,17 @@ function pull() {
 
 
 echo $1
-if [[ $1 == "p" ]];then
+if [[ $1 == "push" ]];then
     push
     if [[ $? -eq 1 ]];then
        echo "failed to push"
     fi
-else
+elif [[ $1 == "pull" ]];then
     pull
     if [[ $? -eq 1 ]];then
        echo "failed to pull"
     fi
+else
+    echo "invalid try again"
 fi
 
