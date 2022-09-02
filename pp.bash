@@ -1,5 +1,5 @@
 #! /bin/bash
-
+echo "yo"
 function push() { 
     
     cd $(dirname $0)
