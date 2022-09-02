@@ -20,7 +20,7 @@ function pull() {
 }
 
 
-
+echo "activated"
 echo $1
 if [[ $1 == "push" ]];then
     push
